@@ -1,0 +1,19 @@
+[0;1;32m●[0m gunicorn.service - gunicorn daemon
+   Loaded: loaded (/etc/systemd/system/gunicorn.service; disabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Thu 2019-07-04 10:12:33 UTC; 15s ago
+ Main PID: 11083 (gunicorn)
+    Tasks: 4 (limit: 1152)
+   CGroup: /system.slice/gunicorn.service
+           ├─11083 /home/ubuntu/myprojectdir/myprojectenv/bin/python3 /home/ubuntu/myprojectdir/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock myproject.wsgi:application
+           ├─11103 /home/ubuntu/myprojectdir/myprojectenv/bin/python3 /home/ubuntu/myprojectdir/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock myproject.wsgi:application
+           ├─11106 /home/ubuntu/myprojectdir/myprojectenv/bin/python3 /home/ubuntu/myprojectdir/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock myproject.wsgi:application
+           └─11107 /home/ubuntu/myprojectdir/myprojectenv/bin/python3 /home/ubuntu/myprojectdir/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock myproject.wsgi:application
+
+Jul 04 10:12:33 ip-172-31-31-83 systemd[1]: Started gunicorn daemon.
+Jul 04 10:12:34 ip-172-31-31-83 gunicorn[11083]: [2019-07-04 10:12:34 +0000] [11083] [INFO] Starting gunicorn 19.9.0
+Jul 04 10:12:34 ip-172-31-31-83 gunicorn[11083]: [2019-07-04 10:12:34 +0000] [11083] [INFO] Listening at: unix:/run/gunicorn.sock (11083)
+Jul 04 10:12:34 ip-172-31-31-83 gunicorn[11083]: [2019-07-04 10:12:34 +0000] [11083] [INFO] Using worker: sync
+Jul 04 10:12:34 ip-172-31-31-83 gunicorn[11083]: [2019-07-04 10:12:34 +0000] [11103] [INFO] Booting worker with pid: 11103
+Jul 04 10:12:34 ip-172-31-31-83 gunicorn[11083]: [2019-07-04 10:12:34 +0000] [11106] [INFO] Booting worker with pid: 11106
+Jul 04 10:12:34 ip-172-31-31-83 gunicorn[11083]: [2019-07-04 10:12:34 +0000] [11107] [INFO] Booting worker with pid: 11107
+Jul 04 10:12:34 ip-172-31-31-83 gunicorn[11083]:  - - [04/Jul/2019:10:12:34 +0000] "GET / HTTP/1.1" 200 16348 "-" "curl/7.58.0"
